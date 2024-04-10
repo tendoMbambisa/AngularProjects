@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Calculator</title>
+    <link rel="stylesheet" href="calc.component.css">
+</head>
+<body>
+      
+    <div class="calculator">
+        
+        <input ngModel #text type="text" id="result" placeholder="{{calValue| number}}" readonly>
+        
+        <div class="buttons" #expression>
+            
+            <button  (click)="onClickValue('c','function')" class="clear">C</button>
+            <button  (click)="onClickValue('/','function')" class="operator">/</button>
+            <button  (click)="onClickValue('*','function')" class="operator">*</button>
+            <button  (click)="onClickValue('-','function')" class="operator">-</button>
+            <button  (click)="onClickValue('=','function')" class="equals">=</button>
+            <button  (click)="onClickValue('+','function')" class="operator">+</button>
+
+            <button  (click)="onClickValue('1','number')" class="number">1</button>
+            <button  (click)="onClickValue('2','number')" class="number">2</button>
+            <button  (click)="onClickValue('3','number')" class="number">3</button>
+            
+            <button  (click)="onClickValue('4','number')" class="number">4</button>
+            <button  (click)="onClickValue('5','number')"class="number">5</button>
+            <button  (click)="onClickValue('6','number')" class="number">6</button>
+            
+            <button  (click)="onClickValue('7','number')" class="number">7</button>
+            <button  (click)="onClickValue('8','number')" class="number">8</button>
+            <button  (click)="onClickValue('9','number')" class="number">9</button>
+            <button  (click)="onClickValue('0','number')" class="number">0</button>
+            <button  class="decimal" (click)="onClickValue('.','number')">.</button>
+            <button class="operator" (click)="onClickValue('%','function')">%</button>
+        </div>
+    </div>
+  
+</body>
+</html>
